@@ -16,6 +16,28 @@ export default function Home() {
     setShowSuccess(true);
   };
 
+  // Structured data for SEO
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://global-internships.com';
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Global Internships',
+    url: siteUrl,
+    logo: `${siteUrl}/logo.svg`,
+    description: 'Connect students with life-changing internship opportunities in London and New York.',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'London',
+      addressCountry: 'GB',
+    },
+    sameAs: [],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'Customer Service',
+      email: 'contact@global-internships.com',
+    },
+  };
+
 
   if (showSuccess) {
     return (
@@ -264,6 +286,7 @@ export default function Home() {
 
       <Footer />
     </div>
+    </>
   );
 }
 
