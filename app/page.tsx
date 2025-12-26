@@ -121,7 +121,7 @@ export default function Home() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        dangerouslySetInnerHTML={{ __html: structuredData }}
       />
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
         <Header scrollToWizard={scrollToWizard} scrollToTop={scrollToTop} />
