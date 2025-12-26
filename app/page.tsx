@@ -92,7 +92,7 @@ export default function Home() {
       contactType: 'Customer Service',
       email: 'contact@global-internships.com',
     },
-  });
+  };
 
   return (
     <>
