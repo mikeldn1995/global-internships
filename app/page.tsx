@@ -74,7 +74,7 @@ export default function Home() {
 
   // Structured data for SEO
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://global-internships.com';
-  const structuredData = JSON.stringify({
+  const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Global Internships',
