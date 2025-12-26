@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -29,15 +29,7 @@ export default function EditBlogPage() {
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
 
-  useEffect(() => {
-    if (!isNew) {
-      fetchBlog();
-    } else {
-      setLoading(false);
-    }
-  }, [params.slug]);
-
-  const fetchBlog = async () => {
+  const fetchBlog = useCallback(async () => {
     try {
       const response = await fetch(`/api/blogs/${params.slug}`);
       if (response.ok) {
@@ -54,7 +46,15 @@ export default function EditBlogPage() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [params.slug]);
+
+  useEffect(() => {
+    if (!isNew) {
+      fetchBlog();
+    } else {
+      setLoading(false);
+    }
+  }, [isNew, fetchBlog]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -156,6 +156,7 @@ export default function EditBlogPage() {
                 placeholder="https://images.unsplash.com/..."
               />
               {blog.image_url && (
+                // eslint-disable-next-line @next/next/no-img-element
                 <img
                   src={blog.image_url}
                   alt="Preview"

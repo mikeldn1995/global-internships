@@ -99,7 +99,7 @@ export default async function BlogDetailPage({ params }: { params: { slug: strin
         <main className="flex-grow flex items-center justify-center py-12">
           <div className="text-center">
             <h1 className="text-3xl font-bold text-gray-900 mb-4">Article Not Found</h1>
-            <p className="text-gray-600 mb-6">The article you're looking for doesn't exist.</p>
+            <p className="text-gray-600 mb-6">The article you&apos;re looking for doesn&apos;t exist.</p>
             <Link
               href="/news"
               className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition"

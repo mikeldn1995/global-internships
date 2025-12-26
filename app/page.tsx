@@ -43,14 +43,14 @@ export default function Home() {
               Thank you for your interest in Global Internships.
             </p>
             <p className="text-sm sm:text-base text-gray-600">
-              We've sent a confirmation email to your inbox. Our team will review your application
+              We&apos;ve sent a confirmation email to your inbox. Our team will review your application
               and get back to you within 5-7 business days with personalized internship
               opportunities.
             </p>
           </div>
           <div className="mt-6 sm:mt-8 p-4 sm:p-6 bg-blue-50 rounded-lg">
             <p className="text-sm sm:text-base text-gray-700 mb-2">
-              <strong>What's next?</strong>
+              <strong>What&apos;s next?</strong>
             </p>
             <ul className="mt-2 sm:mt-3 text-xs sm:text-sm text-gray-600 text-left space-y-2 max-w-md mx-auto">
               <li className="flex items-start">
@@ -63,7 +63,7 @@ export default function Home() {
               </li>
               <li className="flex items-start">
                 <span className="text-blue-600 mr-2">✓</span>
-                <span>You'll receive personalized recommendations</span>
+                <span>You&apos;ll receive personalized recommendations</span>
               </li>
             </ul>
           </div>
@@ -117,8 +117,8 @@ export default function Home() {
               </h1>
               <p className="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed">
                 Join students from leading universities in London and New York securing life-changing
-                internship opportunities at the world's top tech companies. Experience the best of
-                both cities—London's innovation hub and NYC's tech ecosystem.
+                internship opportunities at the world&apos;s top tech companies. Experience the best of
+                both cities—London&apos;s innovation hub and NYC&apos;s tech ecosystem.
               </p>
               <div className="flex flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start mb-6 sm:mb-8">
                 <div className="flex items-center text-gray-700 text-sm sm:text-base">

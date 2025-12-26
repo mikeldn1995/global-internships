@@ -20,8 +20,8 @@ export default function TermsPage() {
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">1. Introduction</h2>
                 <p className="text-gray-700 leading-relaxed">
-                  Welcome to Global Internships ("we," "our," or "us"). These Terms and Conditions
-                  ("Terms") govern your use of our website and services. By accessing or using our
+                  Welcome to Global Internships (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). These Terms and Conditions
+                  (&quot;Terms&quot;) govern your use of our website and services. By accessing or using our
                   website, you agree to be bound by these Terms.
                 </p>
               </section>

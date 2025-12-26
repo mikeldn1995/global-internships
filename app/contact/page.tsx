@@ -72,7 +72,7 @@ export default function ContactPage() {
               Get in Touch
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
-              Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+              Have questions? We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.
             </p>
           </div>
 
@@ -96,7 +96,7 @@ export default function ContactPage() {
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-2">Message Sent!</h2>
                 <p className="text-gray-600 mb-6">
-                  Thank you for contacting us. We'll get back to you soon.
+                  Thank you for contacting us. We&apos;ll get back to you soon.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link

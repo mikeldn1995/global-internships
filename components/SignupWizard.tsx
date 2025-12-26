@@ -236,7 +236,7 @@ export default function SignupWizard({ onSuccess }: SignupWizardProps) {
                   Personal Information
                 </h2>
                 <p className="text-gray-600 text-sm sm:text-base">
-                  Let's start with your basic details
+                  Let&apos;s start with your basic details
                 </p>
               </div>
               

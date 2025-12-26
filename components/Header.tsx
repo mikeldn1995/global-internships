@@ -29,6 +29,7 @@ export default function Header() {
             className="flex items-center cursor-pointer hover:opacity-80 transition-opacity"
             aria-label="Go to top"
           >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/logo.svg"
               alt="Global Internships"
