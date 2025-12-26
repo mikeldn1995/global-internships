@@ -94,6 +94,28 @@ export default function Home() {
     },
   });
 
+  // Structured data for SEO
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://global-internships.com';
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Global Internships',
+    url: siteUrl,
+    logo: `${siteUrl}/logo.svg`,
+    description: 'Connect students with life-changing internship opportunities in London and New York.',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'London',
+      addressCountry: 'GB',
+    },
+    sameAs: [],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'Customer Service',
+      email: 'contact@global-internships.com',
+    },
+  };
+
   return (
     <>
       <script
@@ -101,9 +123,9 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
-        <Header scrollToWizard={scrollToWizard} scrollToTop={scrollToTop} />
+        <Header />
 
-      {/* Hero Section */}
+        {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-8 sm:py-12 lg:py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
