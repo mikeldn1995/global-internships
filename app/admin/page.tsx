@@ -21,6 +21,18 @@ export default function AdminDashboard() {
   const [loading, setLoading] = useState(true);
   const [authenticated, setAuthenticated] = useState(false);
 
+  const fetchBlogs = async () => {
+    try {
+      const response = await fetch('/api/blogs?limit=100');
+      const data = await response.json();
+      setBlogs(data.blogs || []);
+    } catch (err) {
+      console.error('Error fetching blogs:', err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const checkAuth = useCallback(async () => {
     try {
       const response = await fetch('/api/auth/check');
@@ -33,19 +45,11 @@ export default function AdminDashboard() {
     } catch (err) {
       router.push('/admin/login');
     }
-  };
+  }, [router]);
 
-  const fetchBlogs = async () => {
-    try {
-      const response = await fetch('/api/blogs?limit=100');
-      const data = await response.json();
-      setBlogs(data.blogs || []);
-    } catch (err) {
-      console.error('Error fetching blogs:', err);
-    } finally {
-      setLoading(false);
-    }
-  };
+  useEffect(() => {
+    checkAuth();
+  }, [checkAuth]);
 
   const handleDelete = async (slug: string) => {
     if (!confirm('Are you sure you want to delete this blog post?')) {
